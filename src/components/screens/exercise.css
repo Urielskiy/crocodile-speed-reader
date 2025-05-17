@@ -1,0 +1,15 @@
+/* Анімація для зникнення слів */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.word-animation {
+  animation-name: fadeOut;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
