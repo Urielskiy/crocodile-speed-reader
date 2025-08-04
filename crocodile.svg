@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Crocodile body - green color -->
+  <path fill="#4CAF50" d="M40,256 C40,150 120,100 256,100 C392,100 472,150 472,256 C472,362 392,412 256,412 C120,412 40,362 40,256 Z" />
+  <!-- Eyes -->
+  <circle cx="180" cy="200" r="20" fill="white" />
+  <circle cx="332" cy="200" r="20" fill="white" />
+  <circle cx="180" cy="200" r="10" fill="black" />
+  <circle cx="332" cy="200" r="10" fill="black" />
+  <!-- Mouth -->
+  <path fill="#388E3C" d="M150,280 C200,320 312,320 362,280 L362,310 C312,350 200,350 150,310 Z" />
+  <!-- Teeth -->
+  <path fill="white" d="M170,280 L180,300 L200,280 L220,300 L240,280 L260,300 L280,280 L300,300 L320,280 L340,300 L350,280" />
+</svg>
