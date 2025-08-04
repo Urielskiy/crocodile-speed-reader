@@ -46,8 +46,8 @@ const ResultsScreen = ({ stats, onScreenChange }: ResultsScreenProps) => {
   
   const readingLevel = getReadingLevel();
   
-  // Calculate words per second
-  const wordsPerSecond = stats.duration > 0 ? (stats.wordsRead / stats.duration).toFixed(1) : '0';
+  // Calculate words per second (converted from words per minute)
+  const wordsPerSecond = stats.duration > 0 ? (stats.speed / 60).toFixed(1) : '0';
   
   // Calculate progress percentage for visualization
   const getSpeedPercentage = () => {
@@ -85,7 +85,7 @@ const ResultsScreen = ({ stats, onScreenChange }: ResultsScreenProps) => {
             </svg>
             <h1 className="text-3xl font-bold text-center">Результати тренування</h1>
           </div>
-          <p className="text-center opacity-90">Ви успішно завершили тренування швидкого читання!</p>
+          <p className="text-center" style={{ color: '#FFFFFF' }}>Ви успішно завершили тренування швидкого читання!</p>
         </div>
       </motion.div>
       

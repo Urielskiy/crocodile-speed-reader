@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/crocodile-speed-reader/', // Назва вашого репозиторію на GitHub
+  server: {
+    host: true, // Дозволяє доступ з локальної мережі
+  },
 })
