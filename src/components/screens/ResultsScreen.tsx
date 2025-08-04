@@ -46,8 +46,17 @@ const ResultsScreen = ({ stats, onScreenChange }: ResultsScreenProps) => {
   
   const readingLevel = getReadingLevel();
   
-  // Calculate words per second (converted from words per minute)
-  const wordsPerSecond = stats.duration > 0 ? (stats.speed / 60).toFixed(1) : '0';
+  // Використовуємо готове значення wordsPerSecond з об'єкта stats
+  console.log('DEBUG - Stats:', { 
+    duration: stats.duration, 
+    speed: stats.speed, 
+    wordsRead: stats.wordsRead,
+    wordsPerSecond: stats.wordsPerSecond
+  });
+  
+  // Форматуємо значення до одного знаку після коми
+  const wordsPerSecond = stats.wordsPerSecond.toFixed(1);
+  console.log('DEBUG - Words per second:', wordsPerSecond);
   
   // Calculate progress percentage for visualization
   const getSpeedPercentage = () => {

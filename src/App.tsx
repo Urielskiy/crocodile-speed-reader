@@ -13,6 +13,7 @@ function App() {
     duration: 0,
     speed: 0,
     wordsRead: 0,
+    wordsPerSecond: 0, // Додаємо поле wordsPerSecond
   });
   const [darkMode, setDarkMode] = useState(false);
   
@@ -36,6 +37,7 @@ function App() {
         duration,
         speed: settings.speed,
         wordsRead,
+        wordsPerSecond: settings.speed / 60, // Додаємо розрахунок слів за секунду
       });
       
       // Прямий перехід на екран результатів

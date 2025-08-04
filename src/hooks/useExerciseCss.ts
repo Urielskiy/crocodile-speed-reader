@@ -36,6 +36,7 @@ export const useExercise = ({ text, settings }: UseExerciseProps): UseExerciseRe
     duration: 0,
     speed: settings.speed,
     wordsRead: 0,
+    wordsPerSecond: settings.speed / 60, // Додаємо розрахунок слів за секунду
   });
 
   // Зберігаємо налаштування в ref для доступу в таймерах
@@ -116,6 +117,7 @@ export const useExercise = ({ text, settings }: UseExerciseProps): UseExerciseRe
       duration: Math.round(durationInSeconds),
       speed: actualSpeed,
       wordsRead: wordsRead, // Використовуємо поточну кількість прочитаних слів
+      wordsPerSecond: actualSpeed / 60, // Розраховуємо слів за секунду
     });
     
     // Додаємо логування для відстеження часу
@@ -184,7 +186,8 @@ export const useExercise = ({ text, settings }: UseExerciseProps): UseExerciseRe
       setStats({
         duration: finalDuration,
         speed: actualSpeed,
-        wordsRead: totalWords
+        wordsRead: totalWords,
+        wordsPerSecond: actualSpeed / 60 // Розраховуємо слів за секунду
       });
       
       // Не переходимо автоматично на екран результатів
@@ -329,6 +332,7 @@ export const useExercise = ({ text, settings }: UseExerciseProps): UseExerciseRe
       duration: durationSec,
       speed: actualSpeed,
       wordsRead: finalWordsRead,
+      wordsPerSecond: actualSpeed / 60 // Розраховуємо слів за секунду
     });
     
     // Додаткова перевірка, щоб переконатися, що статистика збережена
